@@ -23,5 +23,17 @@ public class ModModelsProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(Items.ruby, Models.GENERATED);
         itemModelGenerator.register(Items.fairwood, Models.GENERATED);
+        itemModelGenerator.register(Items.pressure, Models.GENERATED);
+        itemModelGenerator.register(Items.prospector, Models.GENERATED);
+        itemModelGenerator.register(Items.RUBY_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(Items.RUBY_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(Items.RUBY_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(Items.RUBY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(Items.RUBY_HOE, Models.HANDHELD);
+        itemModelGenerator.register(Items.RUBY_HELMET, Models.GENERATED);
+        itemModelGenerator.register(Items.RUBY_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(Items.RUBY_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(Items.RUBY_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(Items.Big_Mouth_Bird, Models.HANDHELD);
     }
 }

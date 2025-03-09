@@ -15,9 +15,23 @@ public class ModItemGroup {
             .icon(() -> new ItemStack(Items.ruby))
             .entries((displayContext, entries) -> {
                 entries.add(Items.ruby);
+                entries.add(Items.fairwood);
+                entries.add(Items.pressure);
+                entries.add(Items.prospector);
+                entries.add(Items.RUBY_SWORD);
+                entries.add(Items.RUBY_SHOVEL);
+                entries.add(Items.RUBY_PICKAXE);
+                entries.add(Items.RUBY_AXE);
+                entries.add(Items.RUBY_HOE);
+                entries.add(Items.RUBY_HELMET);
+                entries.add(Items.RUBY_CHESTPLATE);
+                entries.add(Items.RUBY_LEGGINGS);
+                entries.add(Items.RUBY_BOOTS);
+                entries.add(Items.Big_Mouth_Bird);
+                ///////////////////////////////
                 entries.add(Blocks.rubyblock);
                 entries.add(Blocks.rubyore);
-                entries.add(Items.fairwood);
+
             })
             .build());
 

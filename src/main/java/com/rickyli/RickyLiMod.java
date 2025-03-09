@@ -2,8 +2,12 @@ package com.rickyli;
 
 import com.rickyli.ModBlocks.Blocks;
 import com.rickyli.ModItems.Items;
+import com.rickyli.tags.ModBlockTags;
+import com.rickyli.tags.ModItemTags;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.impl.content.registry.FuelRegistryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,5 +29,8 @@ public class RickyLiMod implements ModInitializer {
 		Items.init();
 		Blocks.init();
 		ModItemGroup.init();
+		ModItemTags.init();
+		ModBlockTags.init();
+		FuelRegistry.INSTANCE.add(Items.pressure, 3600);
 	}
 }

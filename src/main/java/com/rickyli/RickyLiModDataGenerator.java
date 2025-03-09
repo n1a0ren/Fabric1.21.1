@@ -14,6 +14,6 @@ public class RickyLiModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelsProvider::new);
 		pack.addProvider(ModRecipesProvider::new);
-		//pack.addProvider(ModItemTagsProvider::new);
+		pack.addProvider(ModItemTagsProvider::new);
 	}
 }
