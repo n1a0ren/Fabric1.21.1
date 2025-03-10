@@ -1,7 +1,7 @@
 package com.rickyli;
 
-import com.rickyli.ModBlocks.Blocks;
-import com.rickyli.ModItems.Items;
+import com.rickyli.ModBlocks.MBlocks;
+import com.rickyli.ModItems.MItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -12,25 +12,28 @@ import net.minecraft.util.Identifier;
 public class ModItemGroup {
     public static ItemGroup MyGroup = Registry.register(Registries.ITEM_GROUP,Identifier.of(RickyLiMod.MOD_ID, "rickylimod"), ItemGroup.create(null, -1)
             .displayName(Text.translatable("itemGroup.rickylimod"))
-            .icon(() -> new ItemStack(Items.ruby))
+            .icon(() -> new ItemStack(MItems.ruby))
             .entries((displayContext, entries) -> {
-                entries.add(Items.ruby);
-                entries.add(Items.fairwood);
-                entries.add(Items.pressure);
-                entries.add(Items.prospector);
-                entries.add(Items.RUBY_SWORD);
-                entries.add(Items.RUBY_SHOVEL);
-                entries.add(Items.RUBY_PICKAXE);
-                entries.add(Items.RUBY_AXE);
-                entries.add(Items.RUBY_HOE);
-                entries.add(Items.RUBY_HELMET);
-                entries.add(Items.RUBY_CHESTPLATE);
-                entries.add(Items.RUBY_LEGGINGS);
-                entries.add(Items.RUBY_BOOTS);
-                entries.add(Items.Big_Mouth_Bird);
+                entries.add(MItems.ruby);
+                entries.add(MItems.fairwood);
+                entries.add(MItems.pressure);
+                entries.add(MItems.prospector);
+                entries.add(MItems.RUBY_SWORD);
+                entries.add(MItems.RUBY_SHOVEL);
+                entries.add(MItems.RUBY_PICKAXE);
+                entries.add(MItems.RUBY_AXE);
+                entries.add(MItems.RUBY_HOE);
+                entries.add(MItems.RUBY_HELMET);
+                entries.add(MItems.RUBY_CHESTPLATE);
+                entries.add(MItems.RUBY_LEGGINGS);
+                entries.add(MItems.RUBY_BOOTS);
+                entries.add(MItems.Big_Mouth_Bird);
+                entries.add(MItems.Honey_Bucket);
                 ///////////////////////////////
-                entries.add(Blocks.rubyblock);
-                entries.add(Blocks.rubyore);
+                entries.add(MBlocks.rubyblock);
+                entries.add(MBlocks.rubyore);
+                entries.add(MBlocks.deepslate_rubyore);
+                entries.add(MBlocks.HONEY_BLOCK);
 
             })
             .build());

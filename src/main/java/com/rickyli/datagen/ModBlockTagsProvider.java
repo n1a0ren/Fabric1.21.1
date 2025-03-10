@@ -1,6 +1,6 @@
 package com.rickyli.datagen;
 
-import com.rickyli.ModBlocks.Blocks;
+import com.rickyli.ModBlocks.MBlocks;
 import com.rickyli.tags.ModBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -17,15 +17,18 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(Blocks.rubyblock)
-                .add(Blocks.rubyore);
+                .add(MBlocks.rubyblock)
+                .add(MBlocks.rubyore)
+                .add(MBlocks.deepslate_rubyore);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(Blocks.rubyore);
+                .add(MBlocks.rubyore)
+                .add(MBlocks.deepslate_rubyore);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(Blocks.rubyblock);
+                .add(MBlocks.rubyblock);
         getOrCreateTagBuilder(ModBlockTags.ORE_LIST)
-                .add(Blocks.rubyore)
+                .add(MBlocks.rubyore)
+                .add(MBlocks.deepslate_rubyore)
                 .forceAddTag(BlockTags.COAL_ORES)
                 .forceAddTag(BlockTags.IRON_ORES)
                 .forceAddTag(BlockTags.GOLD_ORES)

@@ -1,10 +1,9 @@
 package com.rickyli.datagen;
 
-import com.rickyli.ModBlocks.Blocks;
-import com.rickyli.ModItems.Items;
+import com.rickyli.ModBlocks.MBlocks;
+import com.rickyli.ModItems.MItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -16,7 +15,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(Blocks.rubyblock);
-        addDrop(Blocks.rubyore, oreDrops(Blocks.rubyore, Items.ruby));
+        addDrop(MBlocks.rubyblock);
+        addDrop(MBlocks.rubyore, oreDrops(MBlocks.rubyore, MItems.ruby));
     }
 }

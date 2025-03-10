@@ -1,13 +1,11 @@
 package com.rickyli.datagen;
 
-import com.rickyli.ModBlocks.Blocks;
-import com.rickyli.ModItems.Items;
+import com.rickyli.ModItems.MItems;
 import com.rickyli.tags.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -20,7 +18,7 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModItemTags.ORE_LIST)
-                .add(Items.ruby)
+                .add(MItems.ruby)
                 .forceAddTag(ItemTags.IRON_ORES);
     }
 }

@@ -1,13 +1,20 @@
 package com.rickyli;
 
-import com.rickyli.ModBlocks.Blocks;
-import com.rickyli.ModItems.Items;
+import com.rickyli.ModBlocks.MBlocks;
+import com.rickyli.ModFluid.MFluids;
+import com.rickyli.ModItems.MItems;
 import com.rickyli.tags.ModBlockTags;
 import com.rickyli.tags.ModItemTags;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.impl.content.registry.FuelRegistryImpl;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +26,7 @@ public class RickyLiMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_ruby"));
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -26,11 +34,16 @@ public class RickyLiMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		Items.init();
-		Blocks.init();
+		MItems.init();
+		MBlocks.init();
+		MFluids.init();
 		ModItemGroup.init();
 		ModItemTags.init();
 		ModBlockTags.init();
-		FuelRegistry.INSTANCE.add(Items.pressure, 3600);
+
+
+		FuelRegistry.INSTANCE.add(MItems.pressure, 3600);
+
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
 	}
 }
