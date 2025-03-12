@@ -1,16 +1,14 @@
-package com.rickyli.ModItems;
+package com.rickyli.item;
 
-import com.rickyli.ModFluid.MFluids;
-import com.rickyli.ModFluid.custom.Honey;
-import com.rickyli.ModItems.custom.Prospector;
+import com.rickyli.fluid.ModFluids;
+import com.rickyli.item.custom.Prospector;
 import com.rickyli.RickyLiMod;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class MItems {
+public class ModItems {
     public static final Item ruby = registerItem("ruby", new Item(new Item.Settings()));
     public static final Item fairwood = registerItem("fairwood", new Item((new Item.Settings()).food(ModFoodComponents.Fairwood)));
     public static final Item pressure = registerItem("pressure", new Item((new Item.Settings())));
@@ -25,7 +23,7 @@ public class MItems {
     public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings", (new ArmorItem(ArmorMaterials.DIAMOND, net.minecraft.item.ArmorItem.Type.LEGGINGS, (new Item.Settings()).maxDamage(net.minecraft.item.ArmorItem.Type.LEGGINGS.getMaxDamage(33)))));
     public static final Item RUBY_BOOTS = registerItem("ruby_boots", (new ArmorItem(ArmorMaterials.DIAMOND, net.minecraft.item.ArmorItem.Type.BOOTS, (new Item.Settings()).maxDamage(net.minecraft.item.ArmorItem.Type.BOOTS.getMaxDamage(33)))));
     public static final Item Big_Mouth_Bird = registerItem("big_mouth_bird", (new SwordItem(ToolMaterials.DIAMOND, (new Item.Settings()).attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4F)))));
-    public static final Item Honey_Bucket = registerItem("honey_bucket", (new BucketItem(MFluids.HONEY, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1))));
+    public static final Item Honey_Bucket = registerItem("honey_bucket", (new BucketItem(ModFluids.HONEY, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1))));
     public static Item registerItem(String id, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(RickyLiMod.MOD_ID, id), item);
     }

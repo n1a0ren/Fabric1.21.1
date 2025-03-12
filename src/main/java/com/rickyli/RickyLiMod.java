@@ -1,8 +1,9 @@
 package com.rickyli;
 
-import com.rickyli.ModBlocks.MBlocks;
-import com.rickyli.ModFluid.MFluids;
-import com.rickyli.ModItems.MItems;
+import com.rickyli.block.ModBlocks;
+import com.rickyli.enchantment.ModEnchantmentEffects;
+import com.rickyli.fluid.ModFluids;
+import com.rickyli.item.ModItems;
 import com.rickyli.tags.ModBlockTags;
 import com.rickyli.tags.ModItemTags;
 import net.fabricmc.api.ModInitializer;
@@ -34,15 +35,15 @@ public class RickyLiMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		MItems.init();
-		MBlocks.init();
-		MFluids.init();
+		ModItems.init();
+		ModBlocks.init();
+		ModFluids.init();
 		ModItemGroup.init();
 		ModItemTags.init();
 		ModBlockTags.init();
+		ModEnchantmentEffects.init();
 
-
-		FuelRegistry.INSTANCE.add(MItems.pressure, 3600);
+		FuelRegistry.INSTANCE.add(ModItems.pressure, 3600);
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
 	}

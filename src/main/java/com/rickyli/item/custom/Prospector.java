@@ -1,13 +1,9 @@
-package com.rickyli.ModItems.custom;
+package com.rickyli.item.custom;
 
-import com.rickyli.datagen.ModBlockTagsProvider;
 import com.rickyli.tags.ModBlockTags;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,4 +1,4 @@
-package com.rickyli.ModBlocks.custom;
+package com.rickyli.block.custom;
 
 import net.minecraft.block.Block;
 

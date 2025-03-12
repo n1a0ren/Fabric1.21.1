@@ -1,7 +1,7 @@
 package com.rickyli.datagen;
 
-import com.rickyli.ModBlocks.MBlocks;
-import com.rickyli.ModItems.MItems;
+import com.rickyli.block.ModBlocks;
+import com.rickyli.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -15,30 +15,30 @@ public class ModModelsProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(MBlocks.rubyblock);
-        blockStateModelGenerator.registerSimpleCubeAll(MBlocks.rubyore);
-        blockStateModelGenerator.registerSimpleCubeAll(MBlocks.deepslate_rubyore);
-        blockStateModelGenerator.registerSimpleState(MBlocks.HONEY_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.rubyblock);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.rubyore);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.deepslate_rubyore);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.HONEY_BLOCK);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(MItems.ruby, Models.GENERATED);
-        itemModelGenerator.register(MItems.fairwood, Models.GENERATED);
-        itemModelGenerator.register(MItems.pressure, Models.GENERATED);
-        itemModelGenerator.register(MItems.prospector, Models.GENERATED);
-        itemModelGenerator.register(MItems.RUBY_HELMET, Models.GENERATED);
-        itemModelGenerator.register(MItems.RUBY_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(MItems.RUBY_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(MItems.RUBY_BOOTS, Models.GENERATED);
-        itemModelGenerator.register(MItems.Big_Mouth_Bird, Models.HANDHELD);
-        itemModelGenerator.register(MItems.Honey_Bucket, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ruby, Models.GENERATED);
+        itemModelGenerator.register(ModItems.fairwood, Models.GENERATED);
+        itemModelGenerator.register(ModItems.pressure, Models.GENERATED);
+        itemModelGenerator.register(ModItems.prospector, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.Big_Mouth_Bird, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Honey_Bucket, Models.GENERATED);
 
 
-        itemModelGenerator.register(MItems.RUBY_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(MItems.RUBY_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(MItems.RUBY_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(MItems.RUBY_AXE, Models.HANDHELD);
-        itemModelGenerator.register(MItems.RUBY_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
     }
 }

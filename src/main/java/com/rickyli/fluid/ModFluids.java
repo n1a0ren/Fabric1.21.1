@@ -1,6 +1,6 @@
-package com.rickyli.ModFluid;
+package com.rickyli.fluid;
 
-import com.rickyli.ModFluid.custom.Honey;
+import com.rickyli.fluid.custom.Honey;
 import com.rickyli.RickyLiMod;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class MFluids {
+public class ModFluids {
     public static final FlowableFluid FLOWING_HONEY = (FlowableFluid)register("flowing_honey", new Honey.Flowing());
     public static final FlowableFluid HONEY = (FlowableFluid)register("honey", new Honey.Still());
     private static <T extends Fluid> T register(String id, T value) {

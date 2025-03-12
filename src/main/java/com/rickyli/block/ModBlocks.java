@@ -1,7 +1,7 @@
-package com.rickyli.ModBlocks;
+package com.rickyli.block;
 
 
-import com.rickyli.ModFluid.MFluids;
+import com.rickyli.fluid.ModFluids;
 import com.rickyli.RickyLiMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -16,7 +16,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-public class MBlocks {
+public class ModBlocks {
     public static final Block rubyore = registerBlock("ruby_ore", new Block(AbstractBlock.Settings.create()
             .strength(3.0f, 3.0f)
             .instrument(NoteBlockInstrument.BASEDRUM)
@@ -33,7 +33,7 @@ public class MBlocks {
     ));
     public static final Block firstblock = registerBlock("firstblock", new Block(AbstractBlock.Settings.create()));
     public static final Block oresniffer = registerBlock("ore_sniffer", new Block(AbstractBlock.Settings.create()));
-    public static final Block HONEY_BLOCK = registerBlock("honey", new FluidBlock(MFluids.HONEY, AbstractBlock.Settings.create()
+    public static final Block HONEY_BLOCK = registerBlock("honey", new FluidBlock(ModFluids.HONEY, AbstractBlock.Settings.create()
             .mapColor(MapColor.PALE_YELLOW)
             .replaceable()
             .noCollision()

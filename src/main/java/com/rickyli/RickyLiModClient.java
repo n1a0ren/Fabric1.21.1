@@ -1,6 +1,6 @@
 package com.rickyli;
 
-import com.rickyli.ModFluid.MFluids;
+import com.rickyli.fluid.ModFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -14,13 +14,13 @@ import net.minecraft.util.Identifier;
 public class RickyLiModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        FluidRenderHandlerRegistry.INSTANCE.register(MFluids.HONEY, MFluids.FLOWING_HONEY, new SimpleFluidRenderHandler(
+        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.HONEY, ModFluids.FLOWING_HONEY, new SimpleFluidRenderHandler(
                 Identifier.of("minecraft:block/water_still"),
                 Identifier.of("minecraft:block/water_flow"),
                 -1
         ));
 
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), MFluids.HONEY, MFluids.FLOWING_HONEY);
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.HONEY, ModFluids.FLOWING_HONEY);
 
         //if you want to use custom textures they needs to be registered.
         //In this example this is unnecessary because the vanilla water textures are already registered.

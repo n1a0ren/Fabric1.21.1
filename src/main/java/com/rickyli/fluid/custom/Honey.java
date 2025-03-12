@@ -1,9 +1,9 @@
-package com.rickyli.ModFluid.custom;
+package com.rickyli.fluid.custom;
 
 
-import com.rickyli.ModBlocks.MBlocks;
-import com.rickyli.ModFluid.MFluids;
-import com.rickyli.ModItems.MItems;
+import com.rickyli.block.ModBlocks;
+import com.rickyli.fluid.ModFluids;
+import com.rickyli.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -97,22 +97,22 @@ public abstract class Honey extends FlowableFluid {
 
     @Override
     public Fluid getStill() {
-        return MFluids.HONEY;
+        return ModFluids.HONEY;
     }
 
     @Override
     public Fluid getFlowing() {
-        return MFluids.FLOWING_HONEY;
+        return ModFluids.FLOWING_HONEY;
     }
 
     @Override
     public Item getBucketItem() {
-        return MItems.Honey_Bucket;
+        return ModItems.Honey_Bucket;
     }
 
     @Override
     protected BlockState toBlockState(FluidState fluidState) {
-        return MBlocks.HONEY_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
+        return ModBlocks.HONEY_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
     }
 
     public static class Flowing extends Honey {

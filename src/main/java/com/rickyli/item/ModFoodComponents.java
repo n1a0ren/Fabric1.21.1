@@ -1,7 +1,6 @@
-package com.rickyli.ModItems;
+package com.rickyli.item;
 
 import net.minecraft.component.type.FoodComponent;
-import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 

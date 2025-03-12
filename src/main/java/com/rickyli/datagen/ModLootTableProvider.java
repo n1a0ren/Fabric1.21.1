@@ -1,7 +1,7 @@
 package com.rickyli.datagen;
 
-import com.rickyli.ModBlocks.MBlocks;
-import com.rickyli.ModItems.MItems;
+import com.rickyli.block.ModBlocks;
+import com.rickyli.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -15,7 +15,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(MBlocks.rubyblock);
-        addDrop(MBlocks.rubyore, oreDrops(MBlocks.rubyore, MItems.ruby));
+        addDrop(ModBlocks.rubyblock);
+        addDrop(ModBlocks.rubyore, oreDrops(ModBlocks.rubyore, ModItems.ruby));
     }
 }
