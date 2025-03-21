@@ -9,7 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ModItemGroup {
+public class ModItemGroups {
     public static ItemGroup MyGroup = Registry.register(Registries.ITEM_GROUP,Identifier.of(RickyLiMod.MOD_ID, "rickylimod"), ItemGroup.create(null, -1)
             .displayName(Text.translatable("itemGroup.rickylimod"))
             .icon(() -> new ItemStack(ModItems.ruby))
@@ -29,6 +29,7 @@ public class ModItemGroup {
                 entries.add(ModItems.RUBY_BOOTS);
                 entries.add(ModItems.Big_Mouth_Bird);
                 entries.add(ModItems.Honey_Bucket);
+                entries.add(ModItems.FLASHPOINT);
                 ///////////////////////////////
                 entries.add(ModBlocks.rubyblock);
                 entries.add(ModBlocks.rubyore);

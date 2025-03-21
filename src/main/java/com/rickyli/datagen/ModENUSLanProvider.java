@@ -30,6 +30,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RUBY_BOOTS, "Ruby Boots");
         translationBuilder.add(ModItems.Big_Mouth_Bird, "Big Mouth Bird");
         translationBuilder.add(ModItems.Honey_Bucket, "Honey Bucket");
+        translationBuilder.add(ModItems.FLASHPOINT, "The Flash's Foot");
 
         translationBuilder.add(ModBlocks.rubyore, "Ruby Ore");
         translationBuilder.add(ModBlocks.rubyblock, "Ruby Block");

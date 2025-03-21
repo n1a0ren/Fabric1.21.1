@@ -20,5 +20,10 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModItemTags.ORE_LIST)
                 .add(ModItems.ruby)
                 .forceAddTag(ItemTags.IRON_ORES);
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.RUBY_HELMET)
+                .add(ModItems.RUBY_CHESTPLATE)
+                .add(ModItems.RUBY_LEGGINGS)
+                .add(ModItems.RUBY_BOOTS);
     }
 }

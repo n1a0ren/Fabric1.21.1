@@ -38,7 +38,7 @@ public class RickyLiMod implements ModInitializer {
 		ModItems.init();
 		ModBlocks.init();
 		ModFluids.init();
-		ModItemGroup.init();
+		ModItemGroups.init();
 		ModItemTags.init();
 		ModBlockTags.init();
 		ModEnchantmentEffects.init();
