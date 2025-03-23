@@ -1,12 +1,10 @@
 package com.rickyli.block;
 
 
+import com.rickyli.block.custom.FairwoodPlantBlock;
 import com.rickyli.fluid.ModFluids;
 import com.rickyli.RickyLiMod;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.FluidBlock;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -41,6 +39,14 @@ public class ModBlocks {
             .pistonBehavior(PistonBehavior.DESTROY)
             .dropsNothing()
             .liquid()
+    ));
+    public static final Block FAIRWOOD = registerBlock("fairwood", new FairwoodPlantBlock(AbstractBlock.Settings.create()
+            .mapColor(MapColor.DARK_GREEN)
+            .noCollision()
+            .ticksRandomly()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.CROP)
+            .pistonBehavior(PistonBehavior.DESTROY)
     ));
 
 

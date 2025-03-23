@@ -16,7 +16,6 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.ruby, "Ruby");
-        translationBuilder.add(ModItems.fairwood, "Fairwood");
         translationBuilder.add(ModItems.pressure, "pressure");
         translationBuilder.add(ModItems.prospector, "prospector");
         translationBuilder.add(ModItems.RUBY_SWORD, "Ruby Sword");
@@ -31,13 +30,17 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.Big_Mouth_Bird, "Big Mouth Bird");
         translationBuilder.add(ModItems.Honey_Bucket, "Honey Bucket");
         translationBuilder.add(ModItems.FLASHPOINT, "The Flash's Foot");
+        translationBuilder.add(ModItems.fairwood, "Fairwood");
+        translationBuilder.add(ModItems.CURRY, "阿活咖喱鸡饭");
 
         translationBuilder.add(ModBlocks.rubyore, "Ruby Ore");
         translationBuilder.add(ModBlocks.rubyblock, "Ruby Block");
         translationBuilder.add(ModBlocks.deepslate_rubyore, "Deepslate Ruby Ore");
         translationBuilder.add(ModBlocks.HONEY_BLOCK, "Honey");
 
-        translationBuilder.add("itemGroup.rickylimod", "RickyLi's Tab");
+        //translationBuilder.add("item.rickylimod.fairwood")
+
+        translationBuilder.add("itemGroup.rickylimod", "RickyLi Mod");
         translationBuilder.add("enchantment.rickylimod.thor", "Thor's Power");
 
         translationBuilder.add("item.rickylimod.prospector.tooltip", "Press \u00A76Shift\u00A7r for more information");
