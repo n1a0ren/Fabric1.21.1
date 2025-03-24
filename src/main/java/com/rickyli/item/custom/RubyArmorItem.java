@@ -18,7 +18,7 @@ public class RubyArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> map =
             new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
                     .put(RickyLiModArmorMaterials.RUBY.value(), new StatusEffectInstance(StatusEffects.HEALTH_BOOST,
-                            1000, 1, false, false, true)).build();
+                            20, 4, false, false, true)).build();
 
     public RubyArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);

@@ -1,6 +1,7 @@
 package com.rickyli.enchantment;
 
 import com.rickyli.RickyLiMod;
+import com.rickyli.enchantment.custom.DraculaEnchantmentEffect;
 import com.rickyli.enchantment.custom.ThorEnchantmentEffect;
 import net.minecraft.block.Block;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
@@ -19,11 +20,14 @@ import net.minecraft.util.Identifier;
 
 public class ModEnchantments {
     public static final RegistryKey<Enchantment> THOR = of("thor");
+    public static final RegistryKey<Enchantment> DRACULA = of("dracula");
     public static void bootstrap(Registerable<Enchantment> registry){
+
         RegistryEntryLookup<DamageType> registryEntryLookup = registry.getRegistryLookup(RegistryKeys.DAMAGE_TYPE);
         RegistryEntryLookup<Enchantment> registryEntryLookup2 = registry.getRegistryLookup(RegistryKeys.ENCHANTMENT);
         RegistryEntryLookup<Item> registryEntryLookup3 = registry.getRegistryLookup(RegistryKeys.ITEM);
         RegistryEntryLookup<Block> registryEntryLookup4 = registry.getRegistryLookup(RegistryKeys.BLOCK);
+
         register(registry, THOR, Enchantment.builder(Enchantment.definition(
                 registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                 registryEntryLookup3.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
@@ -36,6 +40,20 @@ public class ModEnchantments {
                 .exclusiveSet(registryEntryLookup2.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))
                 .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
                         EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM, new ThorEnchantmentEffect()
+                ));
+
+        register(registry, DRACULA, Enchantment.builder(Enchantment.definition(
+                registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                registryEntryLookup3.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                5,
+                1,
+                Enchantment.leveledCost(5,7),
+                Enchantment.leveledCost(25,10),
+                2,
+                AttributeModifierSlot.MAINHAND))
+                .exclusiveSet(registryEntryLookup2.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))
+                .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
+                        EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.ATTACKER, new DraculaEnchantmentEffect()
                 ));
     }
     private static void register(Registerable<Enchantment> registry, RegistryKey<Enchantment> key, Enchantment.Builder builder) {
