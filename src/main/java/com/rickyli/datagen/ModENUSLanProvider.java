@@ -32,6 +32,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.FLASHPOINT, "The Flash's Foot");
         translationBuilder.add(ModItems.fairwood, "Fairwood");
         translationBuilder.add(ModItems.CURRY, "阿活咖喱鸡饭");
+        translationBuilder.add(ModItems.TESTSMELT, "testsmelt");
 
         translationBuilder.add(ModBlocks.rubyore, "Ruby Ore");
         translationBuilder.add(ModBlocks.rubyblock, "Ruby Block");

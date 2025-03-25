@@ -24,8 +24,10 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.rubyore)
                 .add(ModBlocks.deepslate_rubyore);
+
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.rubyblock);
+
         getOrCreateTagBuilder(ModBlockTags.ORE_LIST)
                 .add(ModBlocks.rubyore)
                 .add(ModBlocks.deepslate_rubyore)
@@ -37,5 +39,7 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .forceAddTag(BlockTags.COPPER_ORES)
                 .forceAddTag(BlockTags.LAPIS_ORES)
                 .forceAddTag(BlockTags.REDSTONE_ORES);
+
+
     }
 }

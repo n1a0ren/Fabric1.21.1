@@ -102,6 +102,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.Honey_Bucket, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLASHPOINT, Models.GENERATED);
         itemModelGenerator.register(ModItems.CURRY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TESTSMELT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);

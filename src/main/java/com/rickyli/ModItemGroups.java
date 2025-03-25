@@ -30,6 +30,8 @@ public class ModItemGroups {
                 entries.add(ModItems.Big_Mouth_Bird);
                 entries.add(ModItems.Honey_Bucket);
                 entries.add(ModItems.FLASHPOINT);
+                entries.add(ModItems.CURRY);
+                entries.add(ModItems.TESTSMELT);
                 ///////////////////////////////
                 entries.add(ModBlocks.rubyblock);
                 entries.add(ModBlocks.rubyore);

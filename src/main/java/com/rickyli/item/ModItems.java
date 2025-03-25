@@ -78,7 +78,8 @@ public class ModItems {
             new Item.Settings()
                     .maxDamage(99999)));
 
-
+    public static final Item TESTSMELT = registerItem("testsmelt", new Item(
+            new Item.Settings()));
 
 
     public static Item registerItem(String id, Item item){
