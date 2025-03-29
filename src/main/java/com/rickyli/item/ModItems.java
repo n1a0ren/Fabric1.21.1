@@ -1,8 +1,9 @@
 package com.rickyli.item;
 
-import com.rickyli.RickyLiModArmorMaterials;
-import com.rickyli.RickyLiModToolMaterials;
+import com.rickyli.item.materials.RickyLiModArmorMaterials;
+import com.rickyli.item.materials.RickyLiModToolMaterials;
 import com.rickyli.block.ModBlocks;
+import com.rickyli.entity.ModEntities;
 import com.rickyli.fluid.ModFluids;
 import com.rickyli.item.custom.FlashpointItem;
 import com.rickyli.item.custom.RubyArmorItem;
@@ -79,6 +80,12 @@ public class ModItems {
                     .maxDamage(99999)));
 
     public static final Item TESTSMELT = registerItem("testsmelt", new Item(
+            new Item.Settings()));
+
+    public static final Item BADCAT_SPAWNEGG = registerItem("badcat_spawnegg", new SpawnEggItem(
+            ModEntities.BADCAT, 0x252525, 0x4D4D4D, new Item.Settings()));
+
+    public static final Item GOLD_STAFF = registerItem("gold_staff", new Item(
             new Item.Settings()));
 
 

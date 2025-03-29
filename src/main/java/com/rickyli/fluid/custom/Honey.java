@@ -90,10 +90,6 @@ public abstract class Honey extends FlowableFluid {
         return 100.0F;
     }
 
-    @Override
-    protected int getMaxFlowDistance(WorldView world) {
-        return 4;
-    }
 
     @Override
     public Fluid getStill() {
@@ -123,6 +119,11 @@ public abstract class Honey extends FlowableFluid {
         }
 
         @Override
+        protected int getMaxFlowDistance(WorldView world) {
+            return 6;
+        }
+
+        @Override
         public int getLevel(FluidState fluidState) {
             return fluidState.get(LEVEL);
         }
@@ -134,6 +135,11 @@ public abstract class Honey extends FlowableFluid {
     }
 
     public static class Still extends Honey {
+        @Override
+        protected int getMaxFlowDistance(WorldView world) {
+            return 6;
+        }
+
         @Override
         public int getLevel(FluidState fluidState) {
             return 8;

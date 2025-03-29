@@ -32,6 +32,11 @@ public class ItemRendererMixin {
                 return ((ItemRendererAccessor) this).getModels().getModelManager().getModel(
                         ModelIdentifier.ofInventoryVariant(Identifier.of(RickyLiMod.MOD_ID, "testsmelt_3d")));
             }
+            if(stack.isOf(ModItems.GOLD_STAFF)){
+                return ((ItemRendererAccessor) this).getModels().getModelManager().getModel(
+                        ModelIdentifier.ofInventoryVariant(Identifier.of(RickyLiMod.MOD_ID, "gold_staff_3d")));
+            }
         }return model;
     }
+
 }

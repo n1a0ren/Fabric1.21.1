@@ -1,4 +1,4 @@
-package com.rickyli;
+package com.rickyli.item.materials;
 
 import com.google.common.base.Suppliers;
 import com.rickyli.item.ModItems;

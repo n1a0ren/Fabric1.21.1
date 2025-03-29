@@ -1,5 +1,6 @@
-package com.rickyli;
+package com.rickyli.item.materials;
 
+import com.rickyli.RickyLiMod;
 import com.rickyli.item.ModItems;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;

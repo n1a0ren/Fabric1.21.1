@@ -1,6 +1,7 @@
 package com.rickyli.datagen;
 
 import com.rickyli.block.ModBlocks;
+import com.rickyli.entity.ModEntities;
 import com.rickyli.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -33,11 +34,15 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.fairwood, "Fairwood");
         translationBuilder.add(ModItems.CURRY, "阿活咖喱鸡饭");
         translationBuilder.add(ModItems.TESTSMELT, "testsmelt");
+        translationBuilder.add(ModItems.BADCAT_SPAWNEGG, "耄耋刷怪蛋");
+        translationBuilder.add(ModItems.GOLD_STAFF, "Gold Staff");
 
         translationBuilder.add(ModBlocks.rubyore, "Ruby Ore");
         translationBuilder.add(ModBlocks.rubyblock, "Ruby Block");
         translationBuilder.add(ModBlocks.deepslate_rubyore, "Deepslate Ruby Ore");
         translationBuilder.add(ModBlocks.HONEY_BLOCK, "Honey");
+
+        translationBuilder.add(ModEntities.BADCAT, "圆头耄耋");
 
         //translationBuilder.add("item.rickylimod.fairwood")
 

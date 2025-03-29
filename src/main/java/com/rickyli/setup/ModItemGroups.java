@@ -1,5 +1,6 @@
-package com.rickyli;
+package com.rickyli.setup;
 
+import com.rickyli.RickyLiMod;
 import com.rickyli.block.ModBlocks;
 import com.rickyli.item.ModItems;
 import net.minecraft.item.ItemGroup;
@@ -32,11 +33,12 @@ public class ModItemGroups {
                 entries.add(ModItems.FLASHPOINT);
                 entries.add(ModItems.CURRY);
                 entries.add(ModItems.TESTSMELT);
+                entries.add(ModItems.BADCAT_SPAWNEGG);
+                entries.add(ModItems.GOLD_STAFF);
                 ///////////////////////////////
                 entries.add(ModBlocks.rubyblock);
                 entries.add(ModBlocks.rubyore);
                 entries.add(ModBlocks.deepslate_rubyore);
-                entries.add(ModBlocks.HONEY_BLOCK);
             })
             .build());
 

@@ -1,7 +1,7 @@
 package com.rickyli.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import com.rickyli.RickyLiModArmorMaterials;
+import com.rickyli.item.materials.RickyLiModArmorMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

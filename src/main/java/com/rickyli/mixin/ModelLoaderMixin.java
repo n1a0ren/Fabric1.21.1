@@ -17,5 +17,6 @@ public abstract class ModelLoaderMixin {
             ordinal = 1, shift = At.Shift.AFTER))
     public void addItemModel(CallbackInfo info){
         this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(RickyLiMod.MOD_ID, "testsmelt_3d")));
+        this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(RickyLiMod.MOD_ID, "gold_staff_3d")));
     }
 }

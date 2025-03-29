@@ -1,4 +1,4 @@
-package com.rickyli;
+package com.rickyli.setup;
 
 import com.rickyli.datagen.*;
 import com.rickyli.enchantment.ModEnchantmentEffects;
