@@ -49,6 +49,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.rickylimod", "RickyLi Mod");
         translationBuilder.add("enchantment.rickylimod.thor", "Thor's Power");
         translationBuilder.add("enchantment.rickylimod.dracula", "Dracula's Touch");
+        translationBuilder.add("enchantment.rickylimod.death", "Death Come");
 
         translationBuilder.add("item.rickylimod.prospector.tooltip", "Press \u00A76Shift\u00A7r for more information");
         translationBuilder.add("item.rickylimod.prospector.shift_tooltip", "Use it with holding shift to find the ores under target position");

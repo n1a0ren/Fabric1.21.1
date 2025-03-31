@@ -4,6 +4,7 @@ import com.rickyli.item.ModItems;
 import com.rickyli.tags.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -25,5 +26,7 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RUBY_CHESTPLATE)
                 .add(ModItems.RUBY_LEGGINGS)
                 .add(ModItems.RUBY_BOOTS);
+        getOrCreateTagBuilder(ModItemTags.STAFFS)
+                .add(ModItems.GOLD_STAFF);
     }
 }

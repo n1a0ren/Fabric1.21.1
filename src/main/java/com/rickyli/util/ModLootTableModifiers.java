@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
     private static final Identifier JUNGLE_TEMPLE =
-            Identifier.ofVanilla("chest/jungle_temple");
+            Identifier.ofVanilla("chests/jungle_temple");
 
     private static final Identifier CREEPER =
             Identifier.ofVanilla("entities/creeper");
@@ -25,6 +25,7 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(1.0f)) //指定掉落概率
                         .with(ItemEntry.builder(ModItems.prospector)) //指定掉落物
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))); //指定掉落数量最小值与最大值
+                tableBuilder.pool(poolBuilder);
             }
             if(CREEPER.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -32,6 +33,7 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(1.0f))
                         .with(ItemEntry.builder(ModItems.ruby))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 5.0f)));
+                tableBuilder.pool(poolBuilder);
             }});
     }
 }

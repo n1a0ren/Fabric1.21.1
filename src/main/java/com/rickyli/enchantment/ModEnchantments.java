@@ -1,8 +1,10 @@
 package com.rickyli.enchantment;
 
 import com.rickyli.RickyLiMod;
+import com.rickyli.enchantment.custom.DeathEnchantmentEffect;
 import com.rickyli.enchantment.custom.DraculaEnchantmentEffect;
 import com.rickyli.enchantment.custom.ThorEnchantmentEffect;
+import com.rickyli.tags.ModItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
@@ -21,6 +23,7 @@ import net.minecraft.util.Identifier;
 public class ModEnchantments {
     public static final RegistryKey<Enchantment> THOR = of("thor");
     public static final RegistryKey<Enchantment> DRACULA = of("dracula");
+    public static final RegistryKey<Enchantment> DEATH = of("death");
     public static void bootstrap(Registerable<Enchantment> registry){
 
         RegistryEntryLookup<DamageType> registryEntryLookup = registry.getRegistryLookup(RegistryKeys.DAMAGE_TYPE);
@@ -55,7 +58,23 @@ public class ModEnchantments {
                 .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
                         EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.ATTACKER, new DraculaEnchantmentEffect()
                 ));
+
+        register(registry, DEATH, Enchantment.builder(Enchantment.definition(
+                        registryEntryLookup3.getOrThrow(ModItemTags.STAFFS),
+                        5,
+                        1,
+                        Enchantment.leveledCost(5,7),
+                        Enchantment.leveledCost(25,10),
+                        2,
+                        AttributeModifierSlot.MAINHAND))
+                .exclusiveSet(registryEntryLookup2.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))
+                .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
+                        EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM, new DeathEnchantmentEffect()
+                ));
+
     }
+
+
     private static void register(Registerable<Enchantment> registry, RegistryKey<Enchantment> key, Enchantment.Builder builder) {
         registry.register(key, builder.build(key.getValue()));
     }
