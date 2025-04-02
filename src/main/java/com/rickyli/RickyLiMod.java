@@ -3,6 +3,7 @@ package com.rickyli;
 import com.rickyli.block.ModBlocks;
 import com.rickyli.enchantment.ModEnchantmentEffects;
 import com.rickyli.entity.ModEntities;
+import com.rickyli.event.ModEvents;
 import com.rickyli.fluid.ModFluids;
 import com.rickyli.item.ModItems;
 import com.rickyli.setup.ModItemGroups;
@@ -47,6 +48,7 @@ public class RickyLiMod implements ModInitializer {
 		ModEnchantmentEffects.init();
 		ModEntities.init();
 		ModLootTableModifiers.init();
+		ModEvents.init();
 
 		FuelRegistry.INSTANCE.add(ModItems.pressure, 3600);
 

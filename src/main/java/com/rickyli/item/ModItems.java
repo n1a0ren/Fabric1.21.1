@@ -1,5 +1,6 @@
 package com.rickyli.item;
 
+import com.rickyli.item.custom.GoldStaffItem;
 import com.rickyli.item.materials.RickyLiModArmorMaterials;
 import com.rickyli.item.materials.RickyLiModToolMaterials;
 import com.rickyli.block.ModBlocks;
@@ -85,7 +86,7 @@ public class ModItems {
     public static final Item BADCAT_SPAWNEGG = registerItem("badcat_spawnegg", new SpawnEggItem(
             ModEntities.BADCAT, 0x252525, 0x4D4D4D, new Item.Settings()));
 
-    public static final Item GOLD_STAFF = registerItem("gold_staff", new Item(
+    public static final Item GOLD_STAFF = registerItem("gold_staff", new GoldStaffItem(
             new Item.Settings()));
 
 
