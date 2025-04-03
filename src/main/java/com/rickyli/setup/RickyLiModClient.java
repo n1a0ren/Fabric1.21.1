@@ -3,6 +3,7 @@ package com.rickyli.setup;
 import com.rickyli.entity.*;
 import com.rickyli.entity.client.BadcatEntityRenderer;
 import com.rickyli.entity.client.BadcatModel;
+import com.rickyli.entity.client.BulletEntityRenderer;
 import com.rickyli.fluid.ModFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -27,6 +28,8 @@ public class RickyLiModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.HONEY, ModFluids.FLOWING_HONEY);
         EntityRendererRegistry.register(ModEntities.BADCAT, BadcatEntityRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BADCAT, BadcatModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.BULLET, BulletEntityRenderer::new);
+        //EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BULLET, BulletModel::getTexturedModelData);
     }
 }
 //if you want to use custom textures they needs to be registered.

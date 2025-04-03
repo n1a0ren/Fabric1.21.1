@@ -35,6 +35,9 @@ public class ModItemGroups {
                 entries.add(ModItems.TESTSMELT);
                 entries.add(ModItems.BADCAT_SPAWNEGG);
                 entries.add(ModItems.GOLD_STAFF);
+                entries.add(ModItems.Redgem);
+                entries.add(ModItems.GUN);
+                entries.add(ModItems.BULLET);
                 ///////////////////////////////
                 entries.add(ModBlocks.rubyblock);
                 entries.add(ModBlocks.rubyore);

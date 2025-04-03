@@ -27,9 +27,6 @@ public class GoldStaffItem extends Item {
                 world.spawnEntity(fireballEntity);
                 if(!user.isCreative()){
                     user.getHungerManager().add(-3, 0);
-                    return TypedActionResult.success(itemStack);
-                }else{
-                    return TypedActionResult.success(itemStack);
                 }
             }
         }

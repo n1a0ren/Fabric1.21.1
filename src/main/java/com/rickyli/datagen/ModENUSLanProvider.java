@@ -36,6 +36,9 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TESTSMELT, "testsmelt");
         translationBuilder.add(ModItems.BADCAT_SPAWNEGG, "耄耋刷怪蛋");
         translationBuilder.add(ModItems.GOLD_STAFF, "Gold Staff");
+        translationBuilder.add(ModItems.Redgem, "Ruby Magic");
+        translationBuilder.add(ModItems.BULLET, "Bullet");
+        translationBuilder.add(ModItems.GUN, "Gun");
 
         translationBuilder.add(ModBlocks.rubyore, "Ruby Ore");
         translationBuilder.add(ModBlocks.rubyblock, "Ruby Block");

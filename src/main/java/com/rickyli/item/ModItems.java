@@ -1,14 +1,11 @@
 package com.rickyli.item;
 
-import com.rickyli.item.custom.GoldStaffItem;
+import com.rickyli.item.custom.*;
 import com.rickyli.item.materials.RickyLiModArmorMaterials;
 import com.rickyli.item.materials.RickyLiModToolMaterials;
 import com.rickyli.block.ModBlocks;
 import com.rickyli.entity.ModEntities;
 import com.rickyli.fluid.ModFluids;
-import com.rickyli.item.custom.FlashpointItem;
-import com.rickyli.item.custom.RubyArmorItem;
-import com.rickyli.item.custom.Prospector;
 import com.rickyli.RickyLiMod;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -88,7 +85,12 @@ public class ModItems {
 
     public static final Item GOLD_STAFF = registerItem("gold_staff", new GoldStaffItem(
             new Item.Settings()));
-
+    public static final Item Redgem = registerItem("redgem", new GoldStaffItem(
+            new Item.Settings()));
+    public static final Item BULLET = registerItem("bullet", new BulletItem(
+            new Item.Settings()));
+    public static final Item GUN = registerItem("gun", new GunItem(
+            new Item.Settings()));
 
     public static Item registerItem(String id, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(RickyLiMod.MOD_ID, id), item);
