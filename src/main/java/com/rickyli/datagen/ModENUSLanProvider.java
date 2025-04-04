@@ -57,5 +57,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add("item.rickylimod.prospector.tooltip", "Press \u00A76Shift\u00A7r for more information");
         translationBuilder.add("item.rickylimod.prospector.shift_tooltip", "Use it with holding shift to find the ores under target position");
         translationBuilder.add("item.rickylimod.prospector.unshift_tooltip", "You can use it to find the ores arounds you");
+
+        translationBuilder.add("sounds.rickylimod.gun_shoot", "Gun Shoot");
     }
 }

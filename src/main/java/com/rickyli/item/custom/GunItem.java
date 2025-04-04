@@ -1,18 +1,19 @@
 package com.rickyli.item.custom;
 
+import com.rickyli.entity.custom.BulletEntity;
 import com.rickyli.item.ModItems;
+import com.rickyli.sound.ModSoundEvents;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -32,12 +33,13 @@ public class GunItem extends RangedWeaponItem {
 
     @Override
     public int getRange() {
-        return 15;
+        return 100;
     }
 
     @Override
     protected void shoot(LivingEntity shooter, ProjectileEntity projectile, int index, float speed, float divergence, float yaw, @Nullable LivingEntity target) {
-        projectile.setVelocity(shooter, shooter.getPitch(), shooter.getYaw() + yaw, 0.0F, speed, divergence);
+        Vec3d vec3d1 = shooter.getRotationVec(1.0F);
+        projectile.setVelocity(vec3d1.x, vec3d1.y, vec3d1.z, speed, 0);
     }
 
     @Override
@@ -56,7 +58,7 @@ public class GunItem extends RangedWeaponItem {
                         playerEntity.getX(),
                         playerEntity.getY(),
                         playerEntity.getZ(),
-                        SoundEvents.ENTITY_ARROW_SHOOT,
+                        ModSoundEvents.GUN_SHOOT,
                         SoundCategory.PLAYERS,
                         1.0F,
                         1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 1.0F * 0.5F
@@ -92,11 +94,11 @@ public class GunItem extends RangedWeaponItem {
 
     protected ProjectileEntity createBulletEntity(World world, LivingEntity shooter, ItemStack weaponStack, ItemStack projectileStack, boolean critical) {
         BulletItem bulletItem = projectileStack.getItem() instanceof BulletItem bulletItem1 ? bulletItem1 : (BulletItem) ModItems.BULLET;
-        PersistentProjectileEntity persistentProjectileEntity = bulletItem.createBullet(world, projectileStack, shooter, weaponStack);
+        BulletEntity BulletEntity = (BulletEntity) bulletItem.createBullet(world, projectileStack, shooter, weaponStack);
         if (critical) {
-            persistentProjectileEntity.setCritical(true);
+            BulletEntity.setCritical(true);
         }
 
-        return persistentProjectileEntity;
+        return BulletEntity;
     }
 }

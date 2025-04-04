@@ -1,8 +1,8 @@
 package com.rickyli.item.custom;
 
+import com.rickyli.entity.ModEntities;
 import com.rickyli.entity.custom.BulletEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
@@ -17,13 +17,12 @@ public class BulletItem extends Item implements ProjectileItem {
     public BulletItem(Item.Settings settings) {
         super(settings);
     }
-    public PersistentProjectileEntity createBullet(World world, ItemStack stack, LivingEntity shooter, @Nullable ItemStack shotFrom) {
-        return new BulletEntity(world, shooter, stack.copyWithCount(1), shotFrom);
+    public ProjectileEntity createBullet(World world, ItemStack stack, LivingEntity shooter, @Nullable ItemStack shotFrom) {
+        return new BulletEntity(ModEntities.BULLET, shooter, world, stack.copyWithCount(1), shotFrom);
     }
     @Override
     public ProjectileEntity createEntity(World world, Position pos, ItemStack stack, Direction direction) {
-        BulletEntity bulletEntity = new BulletEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack.copyWithCount(1), null);
-        bulletEntity.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
+        BulletEntity bulletEntity = new BulletEntity(ModEntities.BULLET, pos.getX(), pos.getY(), pos.getZ(), world, stack.copyWithCount(1), null);
         return bulletEntity;
     }
 }

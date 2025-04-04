@@ -7,6 +7,7 @@ import com.rickyli.event.ModEvents;
 import com.rickyli.fluid.ModFluids;
 import com.rickyli.item.ModItems;
 import com.rickyli.setup.ModItemGroups;
+import com.rickyli.sound.ModSoundEvents;
 import com.rickyli.tags.ModBlockTags;
 import com.rickyli.tags.ModItemTags;
 import com.rickyli.util.ModLootTableModifiers;
@@ -49,6 +50,7 @@ public class RickyLiMod implements ModInitializer {
 		ModEntities.init();
 		ModLootTableModifiers.init();
 		ModEvents.init();
+		ModSoundEvents.init();
 
 		FuelRegistry.INSTANCE.add(ModItems.pressure, 3600);
 

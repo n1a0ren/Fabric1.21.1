@@ -29,7 +29,6 @@ public class RickyLiModClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.BADCAT, BadcatEntityRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BADCAT, BadcatModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.BULLET, BulletEntityRenderer::new);
-        //EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BULLET, BulletModel::getTexturedModelData);
     }
 }
 //if you want to use custom textures they needs to be registered.
